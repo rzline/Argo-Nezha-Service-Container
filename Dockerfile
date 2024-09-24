@@ -4,8 +4,8 @@ WORKDIR /dashboard
 
 RUN apt-get update &&\
     apt-get -y install openssh-server wget curl iproute2 vim git cron unzip supervisor nginx sqlite3
-RUN wget -p /opt/alist https://github.com/xhofe/alist/releases/latest/download/alist-linux-amd64.tar.gz &&\
-    tar -zxvf /opt/alist/alist-linux-amd64.tar.gz &&\
+RUN wget -p /opt/alist https://github.com/xhofe/alist/releases/latest/download/alist-linux-amd64.tar.gz
+RUN tar -zxvf /opt/alist/alist-linux-amd64.tar.gz &&\
     chmod +x /opt/alist/alist-linux-amd64.tar.gz &&\
     rm /opt/alist/alist-linux-amd64.tar.gz
 RUN git config --global core.bigFileThreshold 1k &&\
